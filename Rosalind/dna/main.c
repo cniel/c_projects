@@ -44,14 +44,13 @@ void readFasta(char* fileName, char** p_file_contents){
 
 void countDNAbases(char* dna, int* countTab){
 	int i;
-	
 	for(i=0; i<strlen(dna); i++){
 			switch(dna[i]){
-			case 'A': countTab[0]++; break;	//countTab[0]
-			case 'T': countTab[1]++; break;	//countTab[1]
-			case 'G': countTab[2]++; break;	//countTab[2]
-			case 'C': countTab[3]++; break;	//countTab[3]
-			default: countTab[4]++;			//countTab[4]
+			case 'A': countTab[0]++; break;
+			case 'T': countTab[1]++; break;
+			case 'G': countTab[2]++; break;
+			case 'C': countTab[3]++; break;
+			default: countTab[4]++;
 		}
 	}
 }
