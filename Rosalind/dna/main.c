@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 	char* file_contents = NULL;
 	int countTab[5] = {0,0,0,0,-1};
 	
-	readFasta("./dna2.fa", &file_contents);
+	readFasta("./dna.fa", &file_contents);
 	countDNAbases(file_contents, countTab);
 
 	for(i=0; i<5; i++){
