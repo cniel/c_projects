@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 	countDNAbases(file_contents, countTab);
 
 	for(i=0; i<5; i++){
-		printf("%d,\t", countTab[i]);
+		printf("%d\t", countTab[i]);
 	}
 	
 	return 0;
