@@ -3,7 +3,7 @@
 #include <string.h>
 
 void countDNAbases(char* dna, int* countTab);
-void readFasta(char* fileName, char** file_contents);
+void importFile(char* fileName, char** file_contents);
 
 
 int main(int argc, char **argv)
@@ -12,17 +12,19 @@ int main(int argc, char **argv)
 	char* file_contents = NULL;
 	int countTab[5] = {0,0,0,0,-1};
 	
-	readFasta("./dna.fa", &file_contents);
+	importFile("./dna.fa", &file_contents);
 	countDNAbases(file_contents, countTab);
 
 	for(i=0; i<5; i++){
 		printf("%d\t", countTab[i]);
 	}
 	
+	free(file_contents);
+	
 	return 0;
 }
 
-void readFasta(char* fileName, char** p_file_contents){
+void importFile(char* fileName, char** p_file_contents){
 	FILE* handle=NULL;
 	size_t file_size=0;
 
